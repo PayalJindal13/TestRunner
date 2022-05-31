@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "write-ini-file": "^3.0.2"
+  }
+}
