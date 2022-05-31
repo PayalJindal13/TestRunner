@@ -18,9 +18,9 @@ const searchData = {
     TestSearch_1: {
         Operation: '',
         VectorDataFile: '',
-        SaveIndexFile: '',
-        IndexBuildParameters: '',
-        ThreadCount: ''
+        SearchNeighborCount: '',
+        ThreadCount: '',
+        TruthSetFile: ''
     },
     TestSearchEnd: {
         SaveIndexFile: '',

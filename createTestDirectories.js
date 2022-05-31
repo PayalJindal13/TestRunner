@@ -34,6 +34,8 @@ if(!fs.existsSync(working_directory)){
                             buildData.TestBuild.InitStage = 'TestBuildInit'
                             buildData.TestBuild.RunStages = 'TestBuild'
                             buildData.TestBuild.EndStage = 'TestBuildEnd'
+                            buildData.TestBuild_1.Operation = 'Build'
+                            buildData.TestBuild_1.IndexBuildParameters = test.Build.BuildParams
                             buildData.TestBuild_1.ThreadCount = test.Build.BuildThreadCount
                             searchData.ANNIIndexTest.TestSuites = 'TestSearch'
                             searchData.TestSearch.Algorithm = 'randnsg'
@@ -43,13 +45,14 @@ if(!fs.existsSync(working_directory)){
                             searchData.TestSearch.InitStage = 'TestSeacrhInit'
                             searchData.TestSearch.RunStages = 'TestSearch'
                             searchData.TestSearch.EndStage = 'TestSearchEnd'
-                            searchData.TestSearch_1.Operation = 'Search'
+                            searchData.TestSearchInit.QueryParameters = test.Search.SearchParams
+                            searchData.TestSearch_1.Operation = 'Search' 
                             searchData.TestSearch_1.ThreadCount = test.Build.BuildThreadCount
                             writeIniFile(path.join(working_directory,file,`${dirname}/build.ini`), buildData, err => err&&console.log("Error writing build.ini",err)) 
                             writeIniFile(path.join(working_directory,file,`${dirname}/search.ini`), searchData, err => err&&console.log("Error writing search.ini",err))
                         })
                     })
-                })    
+                }).then(() => console.log("Test Directories created successfully"))
             }) 
         })
     }).catch(err => console.log("Error: ",err))
