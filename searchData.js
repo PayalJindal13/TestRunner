@@ -1,11 +1,11 @@
 const searchData = {
-    ANNIIndexTest: {
+    ANNIndexTest: {
         TestSuites: ''
     },
     TestSearch: {
         Algorithm: '',
         DataType: '',
-        Dimension: '',
+        DimensionSize: '',
         DistanceType: '',
         InitStage: '',
         RunStages: '',
@@ -13,14 +13,14 @@ const searchData = {
     },
     TestSearchInit: {
         QueryParameters: '',
-        InitializeIndexFile: ''
+        InitializeIndexfile: ''
     },
     TestSearch_1: {
         Operation: '',
         VectorDataFile: '',
-        SearchNeighborCount: '',
-        ThreadCount: '',
-        TruthSetFile: ''
+        SearchNeighborCount: 5,
+        ThreadCount: 5,
+        TruthsetFile: ''
     },
     TestSearchEnd: {
         SaveIndexFile: '',

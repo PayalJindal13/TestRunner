@@ -1,12 +1,12 @@
 
 const buildData = {
-    ANNIIndexTest: {
+    ANNIndexTest: {
         TestSuites: ''
     },
     TestBuild: {
         Algorithm: 'randnsg',
         DataType: '',
-        Dimension: '',
+        DimensionSize: '',
         DistanceType: '',
         InitStage: '',
         RunStages: '',
